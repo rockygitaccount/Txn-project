@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "f6ce9cc7-2caf-4c3b-86c9-4075f28ac9f4",
+		"name": "Txn",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "22807210",
+		"_collection_link": "https://grey-crescent-413020.postman.co/workspace/Txn-workspace~aa4fb28e-530f-44e1-b678-dd0fddaeee3b/collection/22807210-f6ce9cc7-2caf-4c3b-86c9-4075f28ac9f4?action=share&source=collection_link&creator=22807210"
+	},
+	"item": [
+		{
+			"name": "addTxn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n      \"txnId\": \"74001755\",\r\n      \"customerName\": \"John\",\r\n      \"service\": \"UPI\",\r\n      \"amount\": 3548,\r\n      \"gst\": 0.18,\r\n      \"commission\": 10\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/txn/add"
+			},
+			"response": []
+		},
+		{
+			"name": "getTxnsByAmountRange",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/txn/amount/10000/50000"
+			},
+			"response": []
+		},
+		{
+			"name": "sortTxnsByAmount",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/txn/sort/amount"
+			},
+			"response": []
+		}
+	]
+}
